@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#cv-temp{
+    display: none;
+    
+}
+.myimg{
+    height: 200px;
+    width: 200px;
+    border-radius: 104px;
+    border: 2px solid red;
+}
+.background{
+    background-color: aqua;
+    border-radius: 50px;
+}

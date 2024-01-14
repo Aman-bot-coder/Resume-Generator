@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keyword" content="Pershant Saxena Bareilly">
+    <meta name="keyword" content="Prashant Saxena Bareilly , Prashant Saxena Resume Generator | Prashant Saxena|Aman Saxena Bareilly | Resume Generator Aman">
+    <meta name="description" content="This is a resume generator app developed by Prashant Saxena Bareilly, Prashant is from bareilly and a software Engineer">
+    <title>Resume Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="header">
+        <h1 class="text-center my-2">Resume Generator</h1>
+        <p class="text-center">by Pershant Saxena : <a href="https://www.linkedin.com/in/psoff/" target="_blank">linkedin</a></p>
+    </div>
+    <main>
+        <div class="container" id="cv-form">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Personal Information</h3>
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Please Enter Your Full Name Here">
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="number">Your Contact Number</label>
+                        <input type="tel" id="number" class="form-control" placeholder="You can add multiple Number seprated by comma">
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="Email">Your Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="Please Enter Your Email Address">
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="address">Enter Your Address</label>
+                        <textarea type="text" id="address" class="form-control" placeholder="Please Enter Your Full Address" rows="3" ></textarea>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="profile">Enter Your Address</label>
+                        <input type="file" id="profile" class="form-control" placeholder="Please Enter Your Full Address" rows="3" >
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="resObjective">Enter Your Resume Objective</label>
+                        <textarea type="text" id="resObjective" class="form-control" placeholder="Please Enter Your Resume/CV Objective" rows="5" ></textarea>
+                    </div>
+                    <p class="text-center mt-2"  >Important Links</p>
+                    <div class="form-group mt-2">
+                        <label for="linkedin">Linkedin</label>
+                        <input type="link" id="linkedin" class="form-control" placeholder="Enter Your Linkedin here">
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="Github">Github</label>
+                        <input type="text" id="Github" class="form-control" placeholder="Enter Your Github Link">
+                    </div>
+                    <div class="form-group mt-2 mb-5">
+                        <label for="website">Website | Perosnal Website | Project Link</label>
+                        <input type="text" id="website" class="form-control" placeholder="Enter Your Link here">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Poject/Professional Information</h3>
+                    <div class="form-group mt-2 mb-2 " id="contEdu">
+                        <label for="Academics">Enter Your Academics Qualification</label>
+                        <textarea type="text" id="Academics" class="form-control acqField" placeholder="By Add you can add multiple Qualifications"></textarea>
+                        <div class="container text-center " id="weAdd">
+                            <button class="btn btn-primary btn-sm" style="align-items: center;" onclick="addNewEdu()">Add</button>
+                            <p style="display: inline; color: red; font-size: 10px;align-items: center;">clicking the add button you can add multiple projects </p>
+                        </div>
+                    </div>
+                   
+                    
+                    <div class="form-group mt-2 mb-2" id="work">
+                        <label for="exp">Enter Your Skills</label>
+                        <textarea type="text" id="exp" class="form-control WorkField" 
+                        placeholder="Enter Your Skills" ></textarea>
+                    
+                    <div class="container text-center " id="newEdu">
+                        <button class="btn btn-primary btn-sm" style="align-items: center mt-2" onclick="addNewWork()">Add</button>
+                        <span style="color: red; font-size: 10px; align-items: center;">clicking the add button you can add multiple skills</span>
+                    </div>
+                </div>
+                    
+                </div>
+            </div>
+            <div class="container text-center mb-5 ">
+                <div class="btn btn-primary btn-lg" onclick="generateCV()">Generate CV</div>
+            </div>
+        </div>
+    </main>
+    <!-- CV Template -->
+    <div class="container-fluid" id="cv-temp">
+        <div class="row">
+            <div class="col-md-4 text-center py-5 background">
+                <img src="avatar.jpeg" class="img-fluid myimg" id="propic">
+
+                <div class="container">
+                    <p id="nameT">Pershant Saxena</p>
+                    <p id="contactT">+919760391909</p>
+                    <p id="emailT">psofficial835@gmail.com</p>
+                    <p id="addressT">Vasundhra Sector 15</p>
+                </div>
+
+                <hr/>
+                <p><a href="https://linkedin.com/in/psoff" target="_blank" id="linkT" style="text-decoration: none;">Linkedin</a></p>
+                <p><a href="https://linkedin.com/in/psoff" target="_blank" id="githubT" style="text-decoration: none;">GitHub</a></p>
+                <p><a href="https://linkedin.com/in/psoff" target="_blank" id="websiteT" style="text-decoration: none;">Websites</a></p>
+            </div> 
+        
+        <div class="col-md-8">
+            <h1 class="text-center" style="font-weight: 900;" id="nameT2">Prashant Saxena</h1>
+        <div class="card mt-2">
+        <div class="card-header" style="background-color: aqua;">Obejective</div>
+        <div class="card-body" id="obT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, in. Ullam sint iure facilis vel nemo quisquam alias cum impedit dolor accusantium, rerum dolorum soluta distinctio unde totam possimus vero voluptatum id provident quod cupiditate in natus ipsum? Tempora consequatur odio, blanditiis ab reprehenderit aliquid mollitia cum ut ea placeat.</div>
+    </div>
+    <div class="card mt-2">
+        <div class="card-header" style="background-color: aqua;">Academics Qualifications</div>
+        <div class="card-body">
+            <ul id="acT">
+                <li>10Th</li>
+                <li>12Th</li>
+                <li>Bsc</li>
+                <li>MCA</li>
+            </ul>
+            </div>
+    </div>
+    <div class="card mt-2">
+        <div class="card-header" style="background-color: aqua;">Skills</div>
+        <div class="card-body">
+            <ul id="scT">
+                <li>JAVA</li>
+                <li>JAVA</li>
+                <li>JAVA</li>
+            </ul>
+            </div>
+    </div>
+    <div class="container mt-3 text-center mb-3">
+        <button onclick="printCv()" class="btn btn-primary btn-lg">Print CV</button>
+    </div>
+    
+    </div>
+</div>
+</div>
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
